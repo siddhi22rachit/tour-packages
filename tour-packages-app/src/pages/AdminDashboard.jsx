@@ -17,8 +17,8 @@ const AdminDashboard = () => {
     highlights: ''
   });
 
-  const API_BASE_URL = 'http://localhost:5000/admin/packages';
-  const API_BOOKINGS_URL = 'http://localhost:5000/api/bookings';
+  const API_BASE_URL = 'https://tour-packages-ebon.vercel.app/admin/packages';
+  const API_BOOKINGS_URL = 'https://tour-packages-ebon.vercel.app/api/bookings';
 
   useEffect(() => {
     const fetchData = async () => {

@@ -19,7 +19,7 @@ const AdminSignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/admin/signup', credentials);
+      await axios.post('https://tour-packages-ebon.vercel.app/api/admin/signup', credentials);
       setMessage('Admin created successfully');
       navigate('/admin/login');
     } catch (err) {

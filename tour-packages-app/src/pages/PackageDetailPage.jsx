@@ -14,7 +14,7 @@ const PackageDetailPage = () => {
   useEffect(() => {
     const fetchPackageDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/admin/packages/${id}`); // Fetch package by ID
+        const response = await fetch(`https://tour-packages-ebon.vercel.app/admin/packages/${id}`); // Fetch package by ID
         const data = await response.json();
         if (response.ok) {
           setPkg(data); // Set the fetched package data

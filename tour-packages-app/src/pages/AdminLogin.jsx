@@ -17,7 +17,7 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/admin/login', credentials);
+      const { data } = await axios.post('https://tour-packages-ebon.vercel.app/api/admin/login', credentials);
       localStorage.setItem('adminToken', data.token);
       navigate('/admin/dashboard');
     } catch (err) {

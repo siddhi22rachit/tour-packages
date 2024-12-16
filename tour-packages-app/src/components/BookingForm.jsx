@@ -29,7 +29,7 @@ const BookingForm = ({ pkg, onClose }) => {
 
     // Send the booking details to the backend
     try {
-      const response = await axios.post('http://localhost:5000/api/bookings', {
+      const response = await axios.post('https://tour-packages-ebon.vercel.app/api/bookings', {
         packageId: pkg._id,
         ...formData
       })

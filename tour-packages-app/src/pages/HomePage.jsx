@@ -21,7 +21,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/admin/packages') // Your API endpoint
+        const response = await fetch('https://tour-packages-ebon.vercel.app/admin/packages') // Your API endpoint
         const data = await response.json()
         setTourPackages(data.data) // Assuming the response has a 'data' field containing packages
         setFilteredPackages(data.data) // Set filtered packages to all packages initially
