@@ -4,13 +4,16 @@ import Package from '../models/Package.js';
 // @route POST /admin/packages
 export const addPackage = async (req, res) => {
   try {
+    console.log('Incoming request body:', req.body); // Log the body to check its contents
     const newPackage = new Package(req.body);
     await newPackage.save();
     res.status(201).json({ message: 'Package added successfully', data: newPackage });
   } catch (error) {
+    console.error('Error:', error); // Log the error for more details
     res.status(500).json({ message: 'Error adding package', error: error.message });
   }
 };
+
 
 // @desc Update an existing package
 // @route PUT /admin/packages/:id
